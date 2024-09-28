@@ -1,7 +1,8 @@
 import 'package:ecommerce_mobile_app/constants.dart';
 import 'package:ecommerce_mobile_app/screens/Cart/cart_screent.dart';
 import 'package:ecommerce_mobile_app/screens/Home/home_screen.dart';
-import 'package:ecommerce_mobile_app/screens/favorite.dart';
+import 'package:ecommerce_mobile_app/screens/favorite/favorite.dart';
+import 'package:ecommerce_mobile_app/screens/profie/profile.dart';
 import 'package:flutter/material.dart';
 
 class BottomNavBar extends StatefulWidget {
@@ -14,12 +15,12 @@ class BottomNavBar extends StatefulWidget {
 class _BottomNavBarState extends State<BottomNavBar> {
   int cuttentIndex = 2;
 
-  List screens = const [
+   List screens = const [
     Scaffold(),
+    Favorite(),
     HomeScreen(),
     CartScreent(),
-    Favorite(),
-    Scaffold(),
+    Profile(),
   ];
 
   @override
@@ -108,7 +109,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
               ),
             ]),
       ),
-      body: screens[cuttentIndex],
+        body: screens[cuttentIndex],
     );
   }
 }
